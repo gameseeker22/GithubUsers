@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.view.UserProfile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/profileAvatar2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:minHeight="200dp"
+                android:scaleType="centerCrop"
+                android:background="@color/colorGrey"
+                app:layout_constraintHeight_percent="0.25"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/lblFollowers2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorGrey"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/profileAvatar2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/lblFollowing2"/>
+
+            <TextView
+                android:id="@+id/lblFollowing2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorGrey"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/profileAvatar2"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/lblFollowers2"/>
+
+            <LinearLayout
+                android:id="@+id/layout_info2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:padding="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/lblFollowers2">
+
+                <TextView
+                    android:id="@+id/lblName2"
+                    android:layout_width="108dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:background="@color/colorGrey"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/lblCompany2"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:background="@color/colorGrey"
+                    android:textSize="20dp"/>
+
+                <TextView
+                    android:id="@+id/lblBlog2"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:background="@color/colorGrey"
+                    android:textSize="20dp"/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>

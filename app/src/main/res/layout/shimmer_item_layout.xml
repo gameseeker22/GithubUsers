@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/userContainer"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/userAvatar"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/colorGrey" />
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:background="@color/colorGrey"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/userHtmlUrl"
+            app:layout_constraintEnd_toStartOf="@+id/userNoteIcon"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/userAvatar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/userHtmlUrl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:background="@color/colorGrey"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/userAvatar"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
